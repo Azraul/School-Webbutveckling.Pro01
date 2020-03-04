@@ -10,6 +10,10 @@ Just download and open!
 ## Preview
 ![image of program running](media/photos/site.gif)
 
+## Grade
+###### Course Project
+5/5
+
 ## Contribution
 School project, won't be updated but constructive criticism is welcome.
 
