@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Kuvajaan-home</title>
+            <link rel="stylesheet" type="text/css" href="../../media/css/homestyle.css">
+    </head>
+    
+    <body>
+        <script>document.body.classList.add('fade');</script>
+        <div id="homeHeader"></div>
+        <div class="mainNavigation" id="mainNavigation">
+            <a class="mainNavigation active" href="../home/index.html">Home</a>
+            <a href="../esport/index.html">Esport</a>
+            <a href="../report/index.html">Report</a>
+            <a href="../journey/index.html">My journey</a>
+            <a href="../about/index.html">About</a>
+        </div>
+        <div>
+            <audio id="stayAwhile">
+                <source src="../../media/sound/cain.wav" type="audio/wav">
+                <source src="../../media/sound/cain.ogg" type="audio/ogg">
+            </audio>
+            <h1 class="title pointer" onclick="cainClick()">Stay awhile and listen</h1>
+        </div>
+        <div class="mainContent">
+                <p>When you develop a character like Cain, old, wise and humble and have voice actor record the line “Stay awhile and listen”, are you perhaps trying to relay more than just a memorable quote in a video game or was it all unintentional.</p>
+                <p class="mainContent Italic">Art is the emotional expression of human personality.<br>- Véron, Eugène (1882). L'Esthetique (1st ed.). Paris. p. 35.</p>
+                <p>Unintentional or not as the artist tries to convey his or hers message it is up to us, the recipient, to decide how we act upon that message. What do you feel when you hear “Stay awhile and listen”.</p>
+                <p class="mainContent Italic">If you want to hear Deckard Cain click <span class="pointer underline" onclick="cainClick()">here</span> or on the header above to hear the voice from all those years ago.</p>
+                <p>As technology advances so does out society and at a faster pace each year and for me the words remind me that sometimes one should see what’s in this moment here and now, rather than always looking for the horizon.</p>
+                <form action="mailto:" method="post" enctype="text/plain">
+                    <p>Share a moment you’ve experienced in a game below:</p>
+                    <textarea name="message" rows="10" cols="40" placeholder="Your story... (Disabled)"></textarea>
+                    <p>May we include your story on this webpage:</p>
+                    <input class="radioBtn" type="radio" name="contactme" value="Yes" checked>Yes
+                    <input class="radioBtn" type="radio" name="contactme" value="no">No<br>
+                    <input class="inputBtn" type="submit" value="Submit">
+                    <input class="inputBtn" type="reset" value="Reset">
+                </form>
+            </div>
+            <script>
+                    document.addEventListener("DOMContentLoaded", function(e) {
+                      document.body.classList.remove('fade');
+                    });
+                window.onscroll = function() {mainNav()};
+
+                var mainNavigation = document.getElementById("mainNavigation");
+                var sticky = mainNavigation.offsetTop;
+
+                function mainNav() {
+                    if (window.pageYOffset > sticky) {
+                        mainNavigation.classList.add("stickyMainNavigation");
+                    } else {
+                        mainNavigation.classList.remove("stickyMainNavigation");
+                        }
+                    }
+                function cainClick() {
+                    document.getElementById("stayAwhile").play();
+                }
+            </script>
+    </body>        
+</html>

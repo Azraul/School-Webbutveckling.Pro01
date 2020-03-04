@@ -1,0 +1,160 @@
+body {
+    opacity: 1;
+    transition: 0.7s opacity;
+    margin: 0;
+    font-family: 'Lucida-Sans', Arial, sans-serif;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
+  }
+    body.fade {
+    opacity: 0;
+    transition: none;
+  }
+  h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+  }
+  #homeHeader {
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 30px;
+    height:50vh;
+    min-height:400px;
+    max-height:600px;
+    color:#eee;
+  }
+  #homeHeader:after{
+    content:"";
+    width:100%;
+    height:10%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:-1;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(70,90,100,1) 100%);
+  }
+  #homeHeader:before{
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background:#1B2030 url(../photos/forest.jpg) center no-repeat;
+    background-size:cover;
+    animation: grow 60s  linear 10ms infinite;
+    transition:all 0.2s ease-in-out;
+    z-index:-2
+  }
+  @-webkit-keyframes grow {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+     }
+  @keyframes grow {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+     }
+.mainNavigation { 
+    overflow: hidden;
+    background-color: black;
+  }
+.mainNavigation a {
+    float: left;
+    display: block;
+    clear:none;
+    background-color: black;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 11px;
+    }
+.mainNavigation a:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+  }
+.mainNavigation.active {
+    background-color: rgba(70,90,100,0.75);   
+}
+.title {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  font-size: 18px;
+  padding: 8px;
+}
+.mainContent {
+    text-align: center;
+    font-size: 14px;
+    margin: auto;
+    width: 90%;
+}
+p::first-letter{
+  font-size: large;
+}
+.mainContent.Italic {
+  text-indent: 0px;
+  font-style: italic;
+  text-align: center;
+}
+.pointer {
+  cursor: pointer;
+}
+.pointer.underline {
+  cursor: pointer;
+  text-decoration: underline;
+}
+textarea{
+  padding: 8px;
+  border-radius: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: black solid 1px;
+  width: 80%;
+}
+.inputBtn{
+  border-radius: 8px;
+  background-color: rgb(70,90,100);
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.inputBtn:hover{
+  background-color: black;
+}
+.radioBtn{
+  width: 19px;
+  height: 19px;
+}
+.stickyMainNavigation {
+      position: fixed;
+      top: 0;
+      width: 100%;
+  }
+.stickyMainNavigation + .mainContent {
+      padding-top: 60px;
+  }
+@media only screen and (min-width: 1025px){
+  .mainNavigation a {
+    padding: 14px 16px;
+    font-size: 17px;
+  }
+  .mainContent {
+    width:50%;
+    font-size: 18px;
+    padding: 16px;
+  }
+  .title {
+    padding-top: 24px;
+    font-size:48px;
+  }
+  textarea{
+    width:65%;
+  }
+} 

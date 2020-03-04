@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Kuvajaan-about</title>
+            <link rel="stylesheet" type="text/css" href="../../media/css/aboutstyle.css">
+    </head>
+    <body>
+        <script>document.body.classList.add('fade');</script>
+
+        <div class="mainNavigation" id="mainNavigation">
+            <a href="../home/index.html">Home</a>
+            <a href="../esport/index.html">Esport</a>
+            <a href="../report/index.html">Report</a>
+            <a href="../journey/index.html">My journey</a>
+            <a class="mainNavigation active" href="../about/index.html">About</a>
+        </div>
+        <div class="background"></div>
+        <div class="white-bg shadow"></div>
+            <div class="mainContent">
+                    <h1 class="title">About</h1>
+                    <div class="leftSide">
+                    <p>Kristoffer Kuvaja is a 28-year-old male student at Arcada University of applied sciences, residing in Finland, Espoo with his wife and 7 year old son. </p>
+                    <p>The project was made during his first year of studies for the course Webb-development. The goal of the site is to promote himself and his passions while learning the basics of html5 and CSS.</p>
+                    <p>Many of the sites elements where inspired by various sites across the internet but was mainly built with the many resources available for free at: https://www.w3schools.com/</p>
+                    <p>Thank you for visiting!</p>
+                </div>
+                <div class="rightSide">
+                    <img class="images" onclick="openImageModal(); openImage1()" src="../../media/photos/Profile.jpg" alt="Profile Picture">
+                </div>
+            </div>
+                <div id="mainModal" class="imageModal" onclick="closeImageModal()">
+                        <span class="imageModalClosebtn" onclick="closeImageModal()">&times;</span>
+                        <img class="imageModalContent" id="imageInModal" alt="modal" src="#">
+                </div>
+            <script>
+                    document.addEventListener("DOMContentLoaded", function(e) {
+                      document.body.classList.remove('fade');
+                    });
+            window.onscroll = function() {mainNav()};
+            var mainNavigation = document.getElementById("mainNavigation");
+            var sticky = mainNavigation.offsetTop;
+                            function mainNav() {
+                if (window.pageYOffset > sticky) {
+                    mainNavigation.classList.add("stickyMainNavigation");
+                } else {
+                    mainNavigation.classList.remove("stickyMainNavigation");
+                    }
+                }
+            function openImageModal() {
+                document.getElementById('mainModal').style.display="block";
+            }
+            function closeImageModal() {
+                document.getElementById('mainModal').style.display = "none";
+                modalImg.classList.remove("vertical");
+            }
+            var modalImg = document.getElementById('imageInModal');
+            function openImage1() {
+               modalImg.src="../../media/photos/Profile.jpg";
+            }
+         </script>
+    </body>
+</html>
